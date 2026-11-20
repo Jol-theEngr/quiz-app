@@ -1,1 +1,38 @@
-syle
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="start-section">
+            <h1 id="quiz-title">The Jol Quiz</h1>
+            <p id="quiz-description">The Jol quiz consists of different questions at different difficulty levels <br>
+                Attempt all questions before the time runs out.
+            </p>
+            <p id="best-wishes">Wish You All <span>The Best!</span>
+            </p>
+            <button id="start-button" type="button">Start Quiz</button>
+        </section>
+
+        <section id="quiz-section" hidden>
+            <p id="question-no">Question No</p>
+            <fieldset>
+                <legend id="actual-question">Actual question goes here..</legend>
+                <div id="options"></div>
+            </fieldset>
+            <button id="next-button" type="button">Next</button>
+        </section>
+
+        <section id="results-section" hidden>
+            <h2 id="results-heading">Your results are displayed below</h2>
+            <h3 id="final-score"> final score will appear here</h3>
+            <p id="performance-msg"></p>
+            <button id="restart-button" type="button">Restart</button>
+        </section>
+    </main>
+</body>
+</html>
