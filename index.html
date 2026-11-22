@@ -1,38 +1,128 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>The Jol Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <main>
+
+        <!-- START SETION -->
         <section id="start-section">
+
             <h1 id="quiz-title">The Jol Quiz</h1>
-            <p id="quiz-description">The Jol quiz consists of different questions at different difficulty levels <br>
+
+            <p id="quiz-description">
+                The Jol quiz consists of different questions at different difficulty levels.
                 Attempt all questions before the time runs out.
             </p>
-            <p id="best-wishes">Wish You All <span>The Best!</span>
+
+            <p id="best-score">Best Score: 0/10</p>
+
+            <div id="selection-container">
+
+                <div>
+                    <label for="category">Choose Category</label>
+                    <select id="category">
+                        <option value="">Select a category</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="difficulty">Choose Difficulty</label>
+                    <select id="difficulty">
+                        <option value="">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <p id="best-wishes">
+                Wish You All <span>The Best!</span>
             </p>
-            <button id="start-button" type="button">Start Quiz</button>
+
+            <button id="start-button" type="button">
+                Start Quiz
+            </button>
+
         </section>
 
+
+        <!-- QUIZ SECTION -->
         <section id="quiz-section" hidden>
-            <p id="question-no">Question No</p>
+
+            <p id="loading" hidden>
+                Loading questions...
+            </p>
+
+            <p id="error-message" hidden>
+                Unable to load questions. Please try again.
+            </p>
+
+            <button id="try-again" type="button" hidden>
+                Try Again
+            </button>
+
+            <div id="quiz-info">
+
+                <p id="question-no">
+                    Question 1 of 10
+                </p>
+
+                <p id="score">
+                    Score: 0
+                </p>
+
+                <p id="timer">
+                    Time: 15s
+                </p>
+
+            </div>
+
             <fieldset>
-                <legend id="actual-question">Actual question goes here..</legend>
+
+                <legend id="actual-question">
+                    Your question will appear here.
+                </legend>
+
                 <div id="options"></div>
+
             </fieldset>
-            <button id="next-button" type="button">Next</button>
+
+            <button id="next-button" type="button" hidden>
+                Next
+            </button>
+
         </section>
 
+
+        <!-- RESULS SECTION -->
         <section id="results-section" hidden>
-            <h2 id="results-heading">Your results are displayed below</h2>
-            <h3 id="final-score"> final score will appear here</h3>
+
+            <h2 id="results-heading">
+                Your Quiz Results
+            </h2>
+
+            <h3 id="final-score"></h3>
+
+            <p id="percentage"></p>
+
             <p id="performance-msg"></p>
-            <button id="restart-button" type="button">Restart</button>
+
+            <button id="restart-button" type="button">
+                Play Again
+            </button>
+
         </section>
+
     </main>
 </body>
 </html>
